@@ -10,7 +10,22 @@ function love(){
     }
     else{
         var random = Math.floor(Math.random()*100);
-        score.innerText = random +"%"
+        if(random < 70 && random > 50){
+            random = random+25;
+            score.innerText = random +"%" 
+        }
+        else if(random <= 50 && random > 30){
+            random = random+40;
+            score.innerText = random +"%" 
+            }
+        else if(random <= 30 && random >= 0){
+            random = random +65;
+            score.innerText = random +"%" ;
+        }
+        else{
+            score.innerText = random +"%" 
+        }
     }
-}
 
+
+}
